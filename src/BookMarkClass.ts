@@ -1,4 +1,4 @@
-/*export class BookMark {
+/* export class BookMark {
 
 title: string;
 icon: string;
@@ -16,5 +16,5 @@ getUrl(){
 
 }
 
-}
-*/
+} 
+ */
