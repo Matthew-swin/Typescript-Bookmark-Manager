@@ -11,12 +11,19 @@ if (CreateBookMark == null) {
     CreateBookMark.onclick = function () {
         if(CreateBookMark == undefined) return;
         //new bookMark
-        let poop = document.createElement("p")
-        poop.classList.add('yafucked')
-        poop.innerText = 'I will cut you'
-
-        let
-        NewBookMark?.appendChild(poop)
+        let poop = document.createElement("p");
+        poop.classList.add("yafucked");
+        poop.innerText = 'I will cut you';
+        //delete botton
+        let deleted = document.createElement("button");
+        deleted.classList.add("deleteButton");
+        deleted.innerHTML = '<i class="fas fa-trash">';
+        let favourite = document.createElement("button")
+        favourite.innerHTML = '<i class="fas fa-star"></i>';
+        favourite.classList.add("favouriteToggle")
+        NewBookMark?.appendChild(poop);
+        poop.appendChild(deleted);
+        poop.appendChild(favourite);
         
     }
 
