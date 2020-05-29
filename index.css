@@ -4,6 +4,7 @@ body {
     
 .Container {
 min-height: 100vh;
+min-width: 100%;
 background-color: rgb(189, 112, 179);
 display: grid;
 align-content: center;
@@ -12,7 +13,7 @@ justify-content: center;
     
 .MainBox {
 min-height: 600px;
-width: 600px;
+min-width: 600px;
 display: grid;
 background-color: white;
 grid-template-rows: 100px;
@@ -26,7 +27,7 @@ opacity: 1;
 
 .InputPopup{
 color: white;
-width: 600px;
+min-width: 600px;
 height: 50px;
 background-color: purple;
 border: 0;
@@ -36,17 +37,24 @@ font-size: large;
 
 .PopupPanel {
 display: none;
-position: absolute;
-top: 240px;
-right: 760px;
-justify-content: center;
+position: fixed;
+min-height: 100%;
+min-width: 100%;
+padding-left: 40%;
+padding-top: 10%;
+background-color: rgb(80, 79, 79);
+
 }
 
 .PopupContainer {
 display: grid;
 min-width: 400px;
+max-width: 400px;
 padding: 10px;
 background-color: white;
+border-radius: 7px 7px 7px 7px;
+font-family: 'Roboto', sans-serif;
+
 }
 
 .PopupContainer input[type=text] {
@@ -81,4 +89,42 @@ cursor: pointer;
 width: 100%;
 margin-bottom:10px;
 opacity: 0.8;
+}
+
+.PopupContainer h1 {
+display: grid;
+text-align: center;
+}
+
+
+.BookMarkView{
+display: grid;
+grid-template-columns: 10% 30% 45% 10% 5%;
+grid-template-rows: auto;
+text-align: start;
+padding: 10px;
+padding-left: 20px;
+font-size: 15px;
+color: #BD70B3;
+font-family: 'Roboto', sans-serif;
+border-bottom: 2px dotted #BD70B3;
+}
+
+.BookMarkView h4{
+color: purple;
+margin: 0;
+}
+
+.favIcon{
+background-color: white;
+border: none;
+color: grey;
+outline:none;
+}
+
+.DeleteIcon{
+background-color: white;
+border: none;
+color: black;
+outline:none;
 }
