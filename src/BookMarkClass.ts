@@ -50,6 +50,7 @@ img.setAttribute('src', URL)
 this.element.appendChild(img);
 //the start of the appendaning with title and URL
 this.element.appendChild(document.createTextNode(this.bookmark.title))
+this.element.appendChild(document.createTextNode(" "))
 this.element.appendChild(document.createTextNode(id2))
 //bottom bitch
 NewBookMark?.appendChild(this.element);
