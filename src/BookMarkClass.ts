@@ -41,11 +41,14 @@ this.bookmark = pBookmark;
 
 Spawn(id: string, id2: string){
 this.element = document.createElement("div");
+this.element.classList.add("BookMarkView");
 let NewBookMark = document.getElementById("NewBookMark") as HTMLDivElement | null;
 let URL = this.bookmark.icon;
+//setting up icon image
 let img = document.createElement("img") as HTMLImageElement;
 img.setAttribute('src', URL)
 this.element.appendChild(img);
+//the start of the appendaning with title and URL
 this.element.appendChild(document.createTextNode(this.bookmark.title))
 this.element.appendChild(document.createTextNode(id2))
 //bottom bitch
@@ -53,6 +56,11 @@ NewBookMark?.appendChild(this.element);
 
 
 }
+
+deleteBookMark(){
+
+}
+
 toggleFavourites(id : string){
 
 }
