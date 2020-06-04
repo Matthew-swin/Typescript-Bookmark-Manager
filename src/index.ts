@@ -8,11 +8,18 @@ let Title = document.getElementById("Title") as HTMLInputElement | null;
 let URL = document.getElementById("URL") as HTMLInputElement | null;
 
 
+let youtube = new BookMark("youtube", "youtube.com");
+let youtube2 = new BookMarkFun(youtube);
+youtube2.Spawn("youtube", "youtube.com");
 
+
+let facebook = new BookMark("facebook", "facebook.com");
+let facebook2 = new BookMarkFun(facebook);
+facebook2.Spawn("facebook", "facebook.com");
 
 
 if (InputPopup == null || undefined) {
-    alert("Button not found.");
+    alert("InputPopup not found.");
 } else {
     InputPopup.onclick = function (id: MouseEvent) {
         if (PopupPanel == null || event == null) return;
@@ -21,7 +28,7 @@ if (InputPopup == null || undefined) {
     }
 
     if (ClosePopup == null || undefined) {
-        alert("Button not found.");
+        alert("ClosePopup not found.");
     } else {
         ClosePopup.onclick = function (id: MouseEvent) {
             if (PopupPanel == null || event == null) return;
@@ -30,7 +37,7 @@ if (InputPopup == null || undefined) {
         }
 
         if (AddBookMark == null || undefined) {
-            alert("Button not found.");
+            alert("AddBookMark not found.");
         } else {
             AddBookMark.onclick = function () {
                 if (AddBookMark == null || event == null || PopupPanel == null || Title == null || URL == null) return;
@@ -51,7 +58,7 @@ if (InputPopup == null || undefined) {
 
         }
     }
-
+    
 }
 
 /* if (AddBookMark == null) {
