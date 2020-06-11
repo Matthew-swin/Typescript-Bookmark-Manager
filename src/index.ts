@@ -45,6 +45,7 @@ if (InputPopup == null || undefined) {
                 let a = Title.value;
                 let b = URL.value;
                 let bookMark = new BookMark(a, b);
+                bookMark.setURL(b)
                 let bookMarkFun = new BookMarkFun(bookMark)
                 bookMarkFun.Spawn(a,b);
                 Title.value = "";
@@ -61,36 +62,4 @@ if (InputPopup == null || undefined) {
     
 }
 
-/* if (AddBookMark == null) {
-    alert("Button not found.");
-} else {
 
-    AddBookMark.onclick = function () {
-        if(CreateBookMark == undefined) return;
-        //new bookMark
-        let poop = document.createElement("p");
-        poop.classList.add("yafucked");
-        poop.innerText = 'I will cut you';
-        //delete botton
-        let deleted = document.createElement("button");
-        deleted.classList.add("deleteButton");
-        deleted.innerHTML = '<i class="fas fa-trash">';
-        //favourites button. need to set up toggle
-        let favourite = document.createElement("button")
-        favourite.innerHTML = '<i class="fas fa-star"></i>';
-        favourite.classList.add("favouriteToggle")
-        // the appendaning!!
-        NewBookMark?.appendChild(poop);
-        poop.appendChild(deleted);
-        poop.appendChild(favourite);
-
-        deleted.onclick = function (e) {
-        if(deleted == undefined) return;
-        let item = e.target;
-        if (deleted.classList[0] === "deleteButton"){
-
-        }
-        }
-    }
-}
-*/
